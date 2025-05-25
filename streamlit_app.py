@@ -11,9 +11,6 @@ st.sidebar.info(
     Generate a personalized carbon reduction plan.
 
     👉 [View source code on GitHub](https://github.com/sabirAIE/AI-Driven-Climate-Action-Planner)
-
-    📊 [View Architecture Diagram]
-        please check in navigation bar
     """
 )
 
