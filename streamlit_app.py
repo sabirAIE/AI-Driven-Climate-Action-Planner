@@ -30,4 +30,4 @@ if st.button("Generate Action Plan"):
         st.subheader("Carbon Estimate")
         st.json(action_plan['carbon_estimate'])
     else:
-        st.error("Plan generation failed!")
+        st.error("Plan generation failed! Please try again")
