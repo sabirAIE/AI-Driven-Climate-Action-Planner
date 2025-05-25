@@ -8,7 +8,7 @@ def estimate_carbon_reduction(energy_data, user_goal):
         print(user_goal)
         baseline = energy_data['average_monthly_kwh'] if energy_data['average_monthly_kwh'] else 0
         target_reduction_percent = user_goal['target_reduction']
-        reduction_kwh = baseline if baseline else 0 * (target_reduction_percent / 100)
+        reduction_kwh = baseline * (target_reduction_percent / 100) if baseline else 0
         print(f"reduction KW {reduction_kwh}")
         emissions = estimate_carbon_emissions(reduction_kwh)
         print(emissions)

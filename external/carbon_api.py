@@ -18,7 +18,7 @@ def estimate_carbon_emissions(kwh):
             "data_version": "^21"
         },
         "parameters": {
-            "energy": 800,
+            "energy": kwh,
             "energy_unit": "kWh"
         }
     }
