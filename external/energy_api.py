@@ -16,7 +16,6 @@ def fetch_energy_data(location, power_type="THERMAL"):
 
         for year, records in data.items():
             for record in records:
-                print(f"Record {record}")
                 if record["Region_State"].lower() == location.lower() or location.lower() == "all india":
                     mode = record["mode"]
                     bus_value = float(record["bus"])
