@@ -37,7 +37,7 @@ This is a Streamlit app designed to help users create a **personalized carbon re
 ### Install dependencies
 
 ```bash
-git clone https://github.com/yourusername/climate_action_planner.git
+git clone https://github.com/sabirAIE/AI-Driven-Climate-Action-Planner.git
 cd climate_action_planner
 python -m venv .venv
 source .venv/bin/activate  # or `.venv\Scripts\activate` on Windows
