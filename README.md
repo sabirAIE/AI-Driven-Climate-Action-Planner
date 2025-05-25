@@ -66,3 +66,9 @@ climate_action_planner/
 ├── requirements.txt
 └── README.md
 ```
+## References
+
+### Climatiq Data Coverage
+1. **Co2 Estimate**: https://www.climatiq.io/data
+### Energy Generation API
+**ALL India Electricity Generation Data API**: https://cea.nic.in/api-for-central-electricity-authority-data/?lang=en
