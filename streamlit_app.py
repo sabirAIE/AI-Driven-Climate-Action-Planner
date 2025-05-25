@@ -1,7 +1,7 @@
 import streamlit as st
 from agents.climate_planner_agent import ClimatePlannerAgent
 
-st.title("🌍 AI-Driven Climate Action Planner")
+st.title("🌍 Climate Action Planner")
 
 st.write("Provide your details to generate a personalized carbon reduction plan.")
 
