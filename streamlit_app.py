@@ -21,7 +21,7 @@ st.sidebar.info(
 st.title("🌍 Climate Action Planner")
 st.write("Provide your details to generate a personalized carbon reduction plan.")
 # Input Fields
-location = st.text_input("Location", value="all india")
+location = st.text_input("Location", value="all india", disabled=True)
 target_reduction = st.text_input("Target Carbon Reduction (%)", value="20%")
 duration = st.text_input("Duration in Month(s)", value="12")
 
