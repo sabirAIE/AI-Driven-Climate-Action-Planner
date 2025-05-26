@@ -9,7 +9,7 @@ st.sidebar.title("About")
 st.sidebar.info(
     """
     🌱 **Climate Action Planner**  
-    Generate a personalized carbon reduction plan.
+    Generate a personalized carbon reduction plan.Generate a personalized carbon reduction plan.
 
     👉 [View source code on GitHub](https://github.com/sabirAIE/AI-Driven-Climate-Action-Planner)
     """

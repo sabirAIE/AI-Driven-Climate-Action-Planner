@@ -66,9 +66,15 @@ climate_action_planner/
 ├── requirements.txt
 └── README.md
 ```
-## References
+
+## DATA References and APIs
 
 ### Climatiq Data Coverage
-1. **Co2 Estimate**: https://www.climatiq.io/data
-### Energy Generation API
-**ALL India Electricity Generation Data API**: https://cea.nic.in/api-for-central-electricity-authority-data/?lang=en
+**Carbon Footprint Estimation: Climatiq API.**
+**Co2 Estimate**: https://www.climatiq.io/data
+### Energy Consumption: Central Electricity Authority (CEA) of India.
+**ALL India Electricity Generation Data API:**
+https://cea.nic.in/api-for-central-electricity-authority-data/?lang=en
+### Govt Scheme
+**Government Incentives: Pradhan Mantri Surya Ghar Muft Bijli Yojana and PM E-DRIVE schemes.**
+
