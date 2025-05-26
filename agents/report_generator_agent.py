@@ -31,7 +31,20 @@ def generate_action_plan_report(energy_data, incentives, carbon_estimate, user_g
 
     # Graph 2: Cumulative CO₂ Saved Over Months
     months = np.arange(1, duration + 1)
-    cumulative_co2 = months * expected_emissions_reduction_kg
+    # Generate months array
+    months = np.arange(1, duration + 1)
+
+    # Base cumulative CO₂ saved
+    base_cumulative = months * expected_emissions_reduction_kg
+
+    # Add random noise (±5%)
+    noise_factor = np.random.normal(1.0, 0.05, size=months.shape)
+    cumulative_co2 = base_cumulative * noise_factor
+
+    # Ensure no negative values (just in case)
+    cumulative_co2 = np.maximum(cumulative_co2, 0)
+
+    # Create DataFrame
     line_df = pd.DataFrame({
         'Month': months,
         'Cumulative CO₂ Saved (kg)': cumulative_co2
