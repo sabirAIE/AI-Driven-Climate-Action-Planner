@@ -1,2 +1,5 @@
-streamlit
-requests
+streamlit~=1.45.1
+requests~=2.32.3
+pandas~=2.2.3
+numpy~=2.2.6
+matplotlib~=3.10.3

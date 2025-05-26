@@ -1,5 +1,6 @@
 import streamlit as st
 from agents.climate_planner_agent import ClimatePlannerAgent
+import matplotlib.pyplot as plt
 
 st.set_page_config(page_title="Climate Action Planner", page_icon="🌍", )
 
@@ -38,9 +39,29 @@ if st.button("Generate Action Plan"):
         action_plan = agent.handle_goal(user_goal)
 
     if action_plan:
-        st.success("Plan generated!")
-        st.subheader("Summary")
-        st.write(action_plan['summary'])
+        # Show summary
+        st.success(action_plan['summary'])
+
+        # Bar Chart
+        st.subheader("Baseline vs After Reduction (kWh/month)")
+        st.bar_chart(action_plan['charts']['bar_df'].set_index('Scenario'))
+
+        # Line Chart
+        st.subheader("Cumulative CO₂ Saved Over Time")
+        st.line_chart(action_plan['charts']['line_df'].set_index('Month'))
+
+        # Pie Chart
+        st.subheader("Reduction Percentage")
+        fig, ax = plt.subplots()
+        ax.pie(
+            action_plan['charts']['pie_sizes'],
+            labels=action_plan['charts']['pie_labels'],
+            colors=action_plan['charts']['pie_colors'],
+            autopct='%1.1f%%',
+            startangle=90
+        )
+        ax.axis('equal')
+        st.pyplot(fig)
         st.subheader("Energy Data")
         st.json(action_plan['energy_data'])
         st.subheader("Incentives")
